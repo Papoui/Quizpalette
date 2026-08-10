@@ -5,8 +5,8 @@ module.exports = {
     once: true,
     execute(client){
         console.log(`Ready! Logged in as ${client.user.tag}`);
-        client.channels.fetch('1534311309578076210')
-        .then(channel => channel.send("Chialade"))
-        .catch("Channel invalide");
+        //client.channels.fetch('1534311309578076210')
+        //.then(channel => channel.send("Chialade"))
+        //.catch("Channel invalide");
     }
 }
