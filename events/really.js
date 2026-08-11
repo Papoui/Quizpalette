@@ -8,7 +8,7 @@ dans la base database.db
 const { Events, EmbedBuilder } = require('discord.js');
 const { words: wordList } = require('./reallyList.json');
 const { klipyApiKey } = require('../config.json');
-const { DataBaseSync, DatabaseSync } = require('node:sqlite');
+const { DatabaseSync } = require('node:sqlite');
 const path = require('path');
 
 module.exports = {
@@ -57,7 +57,7 @@ module.exports = {
                 database.prepare(`INSERT INTO user (userId, mdr, ptdr, jure, jpp, pitié, "0fsee") VALUES (?, 0, 0, 0, 0, 0, 0)`).run(message.author.id);
             }
             for(const {word} of foundWordsList){
-                database.prepare(`UPDATE user SET ${word} = ${word} + 1 WHERE userId = ?`).run(message.author.id);
+                database.prepare(`UPDATE user SET "${word}" = "${word}" + 1 WHERE userId = ?`).run(message.author.id);
             }
         }
     }
