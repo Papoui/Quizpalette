@@ -25,14 +25,14 @@ module.exports = {
 						WHERE userId = ?
 						`).get(user.id);
 					
-			description = `
-				Mdr : ${stats.mdr}
-				Ptdr : ${stats.ptdr}
-				Jure : ${stats.jure}
-				Jpp : ${stats.jpp}
-				Pitié : ${stats.pitie}
-				0fsee : ${stats['0fsee']}
-				`;
+			description = 
+				`Mdr : ${stats.mdr}\n` +
+				`Ptdr : ${stats.ptdr}\n` +
+				`Jure : ${stats.jure}\n` +
+				`Jpp : ${stats.jpp}\n` +
+				`Pitié : ${stats.pitie}\n` +
+				`0fsee : ${stats['0fsee']}`
+			;
 		}
 
 		interaction.reply({ 
