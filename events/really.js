@@ -2,7 +2,7 @@
 Réagit si des mots de la liste reallyList.json sont trouvés dans chaque message envoyé.
 Le bot reprends le mot trouvé entre guillemets et affiche un gif représentant une déception.
 
-WIP: pour chaque correspondance, on ajoute le nombre de mots trouvés au compteur de chaque joueur
+Pour chaque correspondance, on ajoute le nombre de mots trouvés au compteur de chaque joueur
 dans la base database.db
 */
 const { Events, EmbedBuilder } = require('discord.js');
