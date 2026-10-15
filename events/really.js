@@ -48,7 +48,11 @@ module.exports = {
                     .setTitle("\""+list+"\"")
                     .setImage(gif)
                 ]
-            })
+            }).then(
+                reply => {
+                    setTimeout(() => reply.delete().catch(() => {}), 5_000);
+                }
+            );
 
             // Ajout des stats dans la base de données avec l'attribut word des paires dans foundWordList
 
